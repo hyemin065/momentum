@@ -190,10 +190,10 @@ const getLocation =() =>{
 }
 const loadWeather = () =>{
     const LocationData = JSON.parse(localStorage.getItem("location"));
-    const {lat, lng} = LocationData;
     if(LocationData === null){
         getLocation();
     }else{
+        const {lat, lng} = LocationData;
         getWeather(lat, lng);
     }
 }
